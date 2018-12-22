@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>kaynes</artifactId>
+        <groupId>cc.cannot</groupId>
+        <version>1.0.0.RELEASE</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>kaynes-web</artifactId>
+    <packaging>jar</packaging>
+
+
+    <dependencies>
+        <dependency>
+            <groupId>cc.cannot</groupId>
+            <artifactId>kaynes-common</artifactId>
+            <version>1.0.0.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>cc.cannot</groupId>
+            <artifactId>kaynes-business</artifactId>
+            <version>1.0.0.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>cc.cannot</groupId>
+            <artifactId>kaynes-api</artifactId>
+            <version>1.0.0.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>cc.cannot</groupId>
+            <artifactId>kaynes-persistence</artifactId>
+            <version>1.0.0.RELEASE</version>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <finalName>kaynes</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <fork>true</fork>
+                    <finalName>app</finalName>
+                    <mainClass>cc.cannot.Application</mainClass>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+    <distributionManagement>
+        <!--snapshot  Repository -->
+        <snapshotRepository>
+            <id>snapshots</id>
+            <name>snapshots</name>
+            <url>http://nuxus.baixing.cn/repository/maven-snapshots/</url>
+        </snapshotRepository>
+        <repository>
+            <id>releases</id>
+            <name>releases</name>
+            <url>http://nuxus.baixing.cn/repository/maven-releases/</url>
+        </repository>
+    </distributionManagement>
+
+</project>

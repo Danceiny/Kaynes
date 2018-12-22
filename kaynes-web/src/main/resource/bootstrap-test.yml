@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: ${app.app-name}
+  profiles: test
+  cloud:
+    consul:
+      host: ${consul.host:test-ms-consul.test-ms.svc.cluster.local}
+      port: ${consul.port:8500}
+      discovery:
+        tags: version=${app.version}
+        enabled: true
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.1.40:3306/dict?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+    username: chaoge
+    password: chaoge
+  redis:
+    host: 192.168.1.40
+    password:
+    port: 6379
+    jedis:
+      pool:
+        max-active: 64
+        max-idle: 64
+        min-idle: 1
+        max-wait: -1
+server:
+  port: 8080

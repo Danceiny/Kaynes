@@ -1,0 +1,48 @@
+##########application config##########
+app:
+  app-id: 146
+  app-name: kaynes
+  version: 1.0.0
+##########application config##########
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.1.40:3306/dict?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+    username: chaoge
+    password: chaoge
+  cloud:
+    consul:
+      config:
+        prefix: config/arch
+        default-context: application
+    stream:
+      bindings:
+        deleteNode:
+          contentType: application/json
+          group: ${spring.application.name}
+          consumer:
+            max-attempts: 3
+        deleteNodeOutput:
+          contentType: application/json
+          destination: deleteNode
+          group: ${spring.application.name}
+      rabbit:
+        bindings:
+          deleteNode:
+            consumer:
+              auto-bind-dlq: true
+              republishToDlq: true
+  application:
+    name: ${app.app-name}
+  redis:
+    host: 192.168.1.40
+    password:
+    port: 6379
+    database: 15
+    jedis:
+      pool:
+        max-active: 8
+        max-idle: 8
+        min-idle: 1
+        max-wait: -1

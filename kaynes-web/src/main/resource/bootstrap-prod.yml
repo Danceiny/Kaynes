@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: ${app.app-name}
+  profiles: prod
+  cloud:
+    consul:
+      host: ${consul.host:default-consul.arch.svc.cluster.local}
+      port: ${consul.port:8500}
+      discovery:
+        tags: version=${app.version}
+        enabled: true
+  redis:
+    jedis:
+      pool:
+        max-active: 32
+        max-idle: 32
+        min-idle: 1
+        max-wait: -1
+
+server:
+  port: 8080

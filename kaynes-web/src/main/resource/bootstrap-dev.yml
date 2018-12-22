@@ -1,0 +1,47 @@
+spring:
+  application:
+    name: ${app.app-name}
+  profiles: dev
+  cloud:
+    consul:
+      host: ms-consul.ms.svc.cluster.local
+      port: 8500
+      discovery:
+        tags: version=${app.version}
+        enabled: true
+    stream:
+      bindings:
+        deleteNode:
+          contentType: application/json
+          group: ${spring.application.name}
+          consumer:
+            max-attempts: 3
+        deleteNodeOutput:
+          contentType: application/json
+          destination: deleteNode
+          group: ${spring.application.name}
+      rabbit:
+        bindings:
+          deleteNode:
+            consumer:
+              auto-bind-dlq: true
+              republishToDlq: true
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.1.40:3306/dict?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+    username: chaoge
+    password: chaoge
+  redis:
+    host: 192.168.1.40
+    password:
+    port: 6379
+    jedis:
+      pool:
+        max-active: 64
+        max-idle: 64
+        min-idle: 1
+        max-wait: -1
+  jpa:
+    show-sql: true
+server:
+  port: 8080

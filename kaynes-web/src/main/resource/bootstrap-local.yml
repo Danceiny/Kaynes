@@ -1,0 +1,41 @@
+app:
+  app-id: 146
+  app-name: kaynes-local
+  version: 1.0.0
+##########application config##########
+
+spring:
+  profiles: local
+  cloud:
+    consul:
+      host: ${consul.host:172.31.1.4}
+      port: ${consul.port:32643}
+      discovery:
+        tags: version=${app.version}
+        enabled: true
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.1.40:3306/dict?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+    username: chaoge
+    password: chaoge
+  application:
+    name: ${app.app-name}
+  redis:
+    host: 192.168.1.40
+    password:
+    port: 6379
+    database: 15
+    jedis:
+      pool:
+        max-active: 8
+        max-idle: 8
+        min-idle: 1
+        max-wait: -1
+  jpa:
+    show-sql: true
+server:
+  port: 8080
+logging:
+  level:
+    cc.cannot.dict.business.tree: DEBUG
+
