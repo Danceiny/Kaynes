@@ -1,11 +1,11 @@
 package cc.cannot.dict.business.service.impl;
 
+import cc.cannot.common.exceptions.NotFoundException;
 import cc.cannot.dict.api.req.AreaUpdateReq;
 import cc.cannot.dict.api.resp.AreaVO;
 import cc.cannot.dict.business.service.AreaService;
 import cc.cannot.dict.business.tree.TreeService;
 import cc.cannot.dict.persistence.entity.AreaEntity;
-import cc.cannot.ms.springtime.modules.base.exception.NotFoundException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;

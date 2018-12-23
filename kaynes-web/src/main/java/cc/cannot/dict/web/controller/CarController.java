@@ -4,7 +4,7 @@ import cc.cannot.dict.api.req.CarUpdateReq;
 import cc.cannot.dict.api.resp.CarVO;
 import cc.cannot.dict.api.resp.JsonResp;
 import cc.cannot.dict.business.service.CarService;
-import cc.cannot.dict.common.models.StringDict;
+import cc.cannot.common.models.StringDict;
 import feign.Headers;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;

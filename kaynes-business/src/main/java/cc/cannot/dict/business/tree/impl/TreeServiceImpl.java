@@ -1,13 +1,12 @@
 package cc.cannot.dict.business.tree.impl;
 
+import cc.cannot.common.exceptions.ArgException;
+import cc.cannot.common.utils.PrimeTypeUtils;
 import cc.cannot.dict.api.req.BaseTreeUpdateReq;
-import cc.cannot.dict.business.exception.ArgException;
 import cc.cannot.dict.business.redis.RedisImpl;
 import cc.cannot.dict.business.tree.TreeCacheService;
 import cc.cannot.dict.business.tree.TreeRepositoryService;
 import cc.cannot.dict.business.tree.TreeService;
-import cc.cannot.dict.business.tree.impl.mq.sender.DeleteNodeSender;
-import cc.cannot.dict.common.utils.PrimeTypeUtils;
 import cc.cannot.dict.persistence.entity.BaseTreeEntity;
 import cc.cannot.dict.persistence.entity.constants.DictTypeEnum;
 import lombok.extern.slf4j.Slf4j;
@@ -47,13 +46,10 @@ public class TreeServiceImpl implements TreeService {
     private final TreeRepositoryService repository;
     private final TreeCacheService treeCacheService;
 
-    private final DeleteNodeSender deleteNodeSender;
 
-    public TreeServiceImpl(final TreeRepositoryService repository, final TreeCacheService treeCacheService,
-                           final DeleteNodeSender deleteNodeSender) {
+    public TreeServiceImpl(final TreeRepositoryService repository, final TreeCacheService treeCacheService) {
         this.repository = repository;
         this.treeCacheService = treeCacheService;
-        this.deleteNodeSender = deleteNodeSender;
     }
 
     /**
@@ -369,8 +365,7 @@ public class TreeServiceImpl implements TreeService {
     @Override
     public void delete(final DictTypeEnum type, final Object bid) {
         // 由于可能要删除众多子节点，比较耗时，扔到队列异步处理
-        deleteNodeSender.sendProcess(type, bid);
-        // this.deleteNode(type, bid);
+        this.deleteNode(type, bid);
     }
 
     public void deleteNode(final DictTypeEnum type, final Object bid) {

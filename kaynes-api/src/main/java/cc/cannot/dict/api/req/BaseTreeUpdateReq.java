@@ -1,6 +1,6 @@
 package cc.cannot.dict.api.req;
 
-import cc.cannot.dict.api.common.models.StringDict;
+import cc.cannot.common.models.StringDict;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.NoArgsConstructor;

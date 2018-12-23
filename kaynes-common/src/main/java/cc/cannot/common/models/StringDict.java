@@ -1,4 +1,4 @@
-package cc.cannot.dict.common.models;
+package cc.cannot.common.models;
 
 
 import com.alibaba.fastjson.JSONObject;
@@ -9,7 +9,8 @@ import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.*;
 
-import static org.apache.commons.codec.CharEncoding.UTF_8;
+import static org.apache.commons.lang3.CharEncoding.UTF_8;
+
 
 /**
  * 源自七牛的StringMap和fastjson中的JSONObject

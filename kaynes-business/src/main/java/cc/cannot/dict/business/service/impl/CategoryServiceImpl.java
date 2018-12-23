@@ -1,12 +1,12 @@
 package cc.cannot.dict.business.service.impl;
 
+import cc.cannot.common.exceptions.NotFoundException;
 import cc.cannot.dict.api.req.CategoryUpdateReq;
 import cc.cannot.dict.api.resp.BaseTreeVO;
 import cc.cannot.dict.api.resp.CategoryVO;
 import cc.cannot.dict.business.service.CategoryService;
 import cc.cannot.dict.business.tree.TreeService;
 import cc.cannot.dict.persistence.entity.CategoryEntity;
-import cc.cannot.ms.springtime.modules.base.exception.NotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 

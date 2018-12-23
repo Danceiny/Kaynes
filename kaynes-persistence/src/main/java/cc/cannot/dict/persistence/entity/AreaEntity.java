@@ -3,7 +3,7 @@ package cc.cannot.dict.persistence.entity;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.annotation.JSONField;
 import cc.cannot.dict.api.constant.AreaLevelEnum;
-import cc.cannot.dict.common.utils.PrimeTypeUtils;
+import cc.cannot.common.utils.PrimeTypeUtils;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import lombok.EqualsAndHashCode;

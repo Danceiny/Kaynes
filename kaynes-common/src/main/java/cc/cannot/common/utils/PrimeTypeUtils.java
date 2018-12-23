@@ -1,4 +1,4 @@
-package cc.cannot.dict.common.utils;
+package cc.cannot.common.utils;
 
 /**
  * 基本数据类型装箱后防止空指针的辅助方法

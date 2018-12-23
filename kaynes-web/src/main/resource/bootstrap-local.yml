@@ -6,22 +6,20 @@ app:
 
 spring:
   profiles: local
-  cloud:
-    consul:
-      host: ${consul.host:172.31.1.4}
-      port: ${consul.port:32643}
-      discovery:
-        tags: version=${app.version}
-        enabled: true
+  main:
+    allow-bean-definition-overriding: true
+  rabbitmq:
+    host: google.cannot.cc
+    password: baixing-vod-demo
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://192.168.1.40:3306/dict?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
-    username: chaoge
-    password: chaoge
+    url: jdbc:mysql://127.0.0.1:3306/dict?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+    username: root
+    password: 1996
   application:
     name: ${app.app-name}
   redis:
-    host: 192.168.1.40
+    host: 127.0.0.1
     password:
     port: 6379
     database: 15

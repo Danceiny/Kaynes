@@ -1,4 +1,4 @@
-package cc.cannot.dict.common.utils;
+package cc.cannot.common.utils;
 
 import org.joda.time.format.ISODateTimeFormat;
 

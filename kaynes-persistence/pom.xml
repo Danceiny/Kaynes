@@ -13,26 +13,18 @@
 
     <dependencies>
         <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-jpa</artifactId>
-            <exclusions>
-                <exclusion>
-                    <artifactId>log4j-to-slf4j</artifactId>
-                    <groupId>org.apache.logging.log4j</groupId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-
-        <dependency>
             <groupId>cc.cannot</groupId>
             <artifactId>kaynes-api</artifactId>
             <version>1.0.0.RELEASE</version>
             <scope>compile</scope>
         </dependency>
+        <dependency>
+            <groupId>cc.cannot</groupId>
+            <artifactId>kaynes-common</artifactId>
+            <version>1.0.0.RELEASE</version>
+            <scope>compile</scope>
+        </dependency>
+
     </dependencies>
 
 </project>

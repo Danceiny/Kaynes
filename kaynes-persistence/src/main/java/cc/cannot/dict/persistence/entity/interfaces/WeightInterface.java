@@ -1,6 +1,6 @@
 package cc.cannot.dict.persistence.entity.interfaces;
 
-import cc.cannot.dict.common.utils.PrimeTypeUtils;
+import cc.cannot.common.utils.PrimeTypeUtils;
 
 
 public interface WeightInterface {

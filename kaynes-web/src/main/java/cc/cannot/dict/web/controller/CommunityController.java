@@ -5,7 +5,7 @@ import cc.cannot.dict.api.req.CommunityUpdateReq;
 import cc.cannot.dict.api.resp.CommunityVO;
 import cc.cannot.dict.api.resp.JsonResp;
 import cc.cannot.dict.business.service.CommunityService;
-import cc.cannot.dict.common.models.StringDict;
+import cc.cannot.common.models.StringDict;
 import feign.Headers;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;

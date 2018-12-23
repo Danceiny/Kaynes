@@ -2,7 +2,7 @@ package cc.cannot.dict.business.tree.impl;
 
 import com.alibaba.fastjson.JSONObject;
 import cc.cannot.dict.business.tree.TreeRepositoryService;
-import cc.cannot.dict.common.utils.TimeUtils;
+import cc.cannot.common.utils.TimeUtils;
 import cc.cannot.dict.persistence.entity.AreaEntity;
 import cc.cannot.dict.persistence.entity.BaseTreeEntity;
 import cc.cannot.dict.persistence.entity.CarEntity;

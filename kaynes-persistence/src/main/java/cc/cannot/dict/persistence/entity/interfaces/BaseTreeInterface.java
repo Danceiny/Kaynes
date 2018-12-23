@@ -1,7 +1,7 @@
 package cc.cannot.dict.persistence.entity.interfaces;
 
 import com.alibaba.fastjson.annotation.JSONField;
-import cc.cannot.dict.common.utils.PrimeTypeUtils;
+import cc.cannot.common.utils.PrimeTypeUtils;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**

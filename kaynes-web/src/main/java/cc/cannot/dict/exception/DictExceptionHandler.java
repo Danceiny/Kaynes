@@ -1,10 +1,10 @@
 package cc.cannot.dict.exception;
 
+import cc.cannot.common.exceptions.BaseException;
 import cc.cannot.dict.api.resp.JsonResp;
-import cc.cannot.ms.springtime.modules.base.exception.BaseException;
+import com.fasterxml.jackson.core.JsonParseException;
 import com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.boot.json.JsonParseException;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.HttpMediaTypeNotSupportedException;
 import org.springframework.web.bind.ServletRequestBindingException;

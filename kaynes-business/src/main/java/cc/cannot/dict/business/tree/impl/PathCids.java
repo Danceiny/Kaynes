@@ -2,7 +2,7 @@ package cc.cannot.dict.business.tree.impl;
 
 import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.TypeReference;
-import cc.cannot.dict.common.utils.StrUtils;
+import cc.cannot.common.utils.StrUtils;
 import cc.cannot.dict.persistence.entity.BaseTreeEntity;
 
 import java.util.*;

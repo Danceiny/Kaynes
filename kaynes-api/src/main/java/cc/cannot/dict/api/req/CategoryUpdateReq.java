@@ -1,7 +1,7 @@
 package cc.cannot.dict.api.req;
 
 import cc.cannot.dict.api.constant.CategoryLevelEnum;
-import cc.cannot.dict.common.models.StringDict;
+import cc.cannot.common.models.StringDict;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;

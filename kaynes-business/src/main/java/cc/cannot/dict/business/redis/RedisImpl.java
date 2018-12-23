@@ -2,7 +2,7 @@ package cc.cannot.dict.business.redis;
 
 import com.alibaba.fastjson.JSONException;
 import com.alibaba.fastjson.JSONObject;
-import cc.cannot.dict.common.utils.PrimeTypeUtils;
+import cc.cannot.common.utils.PrimeTypeUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.data.redis.core.RedisTemplate;

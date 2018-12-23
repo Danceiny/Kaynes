@@ -1,6 +1,6 @@
 package cc.cannot.dict.persistence.entity;
 
-import cc.cannot.dict.common.utils.TimeUtils;
+import cc.cannot.common.utils.TimeUtils;
 import lombok.Data;
 
 import javax.persistence.*;

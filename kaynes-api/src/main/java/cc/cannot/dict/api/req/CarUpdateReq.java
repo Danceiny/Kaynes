@@ -1,7 +1,7 @@
 package cc.cannot.dict.api.req;
 
 import cc.cannot.dict.api.constant.CarLevelEnum;
-import cc.cannot.dict.common.models.StringDict;
+import cc.cannot.common.models.StringDict;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;

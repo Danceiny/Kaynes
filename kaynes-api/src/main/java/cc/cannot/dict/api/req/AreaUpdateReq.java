@@ -7,6 +7,7 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 import org.springframework.util.StringUtils;
+import cc.cannot.common.models.StringDict;
 
 @Data
 @EqualsAndHashCode(callSuper = true)

@@ -3,7 +3,7 @@ package cc.cannot.dict.web.controller;
 import cc.cannot.dict.api.req.AreaUpdateReq;
 import cc.cannot.dict.api.resp.AreaVO;
 import cc.cannot.dict.api.resp.JsonResp;
-import cc.cannot.dict.common.models.StringDict;
+import cc.cannot.common.models.StringDict;
 import cc.cannot.dict.business.service.AreaService;
 import feign.Headers;
 import io.swagger.annotations.ApiOperation;
